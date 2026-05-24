@@ -17,6 +17,15 @@
         android:layout_marginLeft="45dp"
         android:layout_marginTop="45dp" />
 
+    <Button
+        android:id="@+id/btnDetailedResults"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:text="DetailedResults"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="45dp" />
+
+
     <TextView
         android:id="@+id/txtOutput"
         android:layout_marginTop="45dp"

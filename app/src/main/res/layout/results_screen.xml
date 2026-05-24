@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/results"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ResultsScreen">>
+
+    <Button
+        android:id="@+id/btnTemp"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="45dp" />
+
+
+</LinearLayout>

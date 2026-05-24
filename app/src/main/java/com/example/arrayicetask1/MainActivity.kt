@@ -17,23 +17,26 @@ class MainActivity : AppCompatActivity() {
 
         val btnTemp = findViewById<Button>(R.id.btnTemp)
         val txtOutput = findViewById<TextView>(R.id.txtOutput)
+        val btnDetailedResults = findViewById<Button>(R.id.btnDetailedResults)
 
 
         btnTemp.setOnClickListener {
 
-            val temperatures = arrayOf(25, 30, 22, 28, 26)
+            val mintemperatures = arrayOf(12, 15, 10, 18, 16)
+            val maxtemperatures = arrayOf(25, 30, 22, 28, 26)
+            val weatherconditions = arrayOf("Cloudy", "Sunny", "Rainy", "Sunny", "Windy")
          var result = "25\n 30\n 22\n 28\n 26" 
 
 
 
             var total = 0
-            for (temp in temperatures) {
+            for (temp in maxtemperatures) {
                 total += temp
             }
 
-            val average = total / temperatures.size
+            val average = total / maxtemperatures.size
 
-            txtOutput.text = "$result\nTotal: $total\nAverage: $average\nHighest: ${temperatures.max()}"
+            txtOutput.text = "$result\nTotal: $total\nAverage: $average\nHighest: ${maxtemperatures.max()}"
         }
         }
     }
