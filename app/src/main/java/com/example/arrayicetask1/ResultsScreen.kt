@@ -16,38 +16,44 @@ class ResultsScreen : AppCompatActivity() {
         val btnBack = findViewById<Button>(R.id.btnBack)
         val btnWeather = findViewById<Button>(R.id.btnWeather)
         val txtWeather = findViewById<TextView>(R.id.txtWeather)
+        val txtOutput = findViewById<TextView>(R.id.txtOutput)
+
 
 
 
         btnBack.setOnClickListener {
-            intent = Intent(this, MainActivity::class.java)
+            intent = Intent(this, SplashScreen::class.java)
             startActivity(intent)
         }
         btnWeather.setOnClickListener {
             val minTemperatures = intent.getIntArrayExtra("minTemperatures")
             val maxTemperatures = intent.getIntArrayExtra("maxTemperatures")
             val weatherConditions = intent.getStringArrayExtra("weatherConditions")
-
-            txtWeather.text = "$minTemperatures\n$maxTemperatures\n$weatherConditions" 
-
-
-    }
+            val day = intent.getStringExtra("day")
 
 
+            txtWeather.text = "$day\n$minTemperatures\n$maxTemperatures\n$weatherConditions"
 
 
-
-
-
-
-
-
-
-
-
-
-
+        }
 
 
     }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }

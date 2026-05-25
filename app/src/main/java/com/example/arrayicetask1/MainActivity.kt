@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         val btnTemp = findViewById<Button>(R.id.btnTemp)
         val txtOutput = findViewById<TextView>(R.id.txtOutput)
         val btnDetailedResults = findViewById<Button>(R.id.btnDetailedResults)
+        val weatherEditView = findViewById<TextView>(R.id.weatherEditView)
 
 
         btnTemp.setOnClickListener {
@@ -26,7 +27,16 @@ class MainActivity : AppCompatActivity() {
             val minTemperatures = arrayOf(12, 15, 10, 18, 16)
             val maxTemperatures = arrayOf(25, 30, 22, 28, 26)
             val weatherConditions = arrayOf("Cloudy", "Sunny", "Rainy", "Sunny", "Windy")
-         var result = "25\n 30\n 22\n 28\n 26" 
+         var result = "25\n 30\n 22\n 28\n 26"
+
+            val day = weatherEditView.text.toString()
+            when (day) {
+                "Monday" -> weatherEditView.text = "$minTemperatures[0]\n$maxTemperatures[0]\n$weatherConditions[0]"
+                "Tuesday" -> weatherEditView.text = "$minTemperatures[1]\n$maxTemperatures[1]\n$weatherConditions[1]"
+                "Wednesday" -> weatherEditView.text = "$minTemperatures[2]\n$maxTemperatures[2]\n$weatherConditions[2]"
+                "Thursday" -> weatherEditView.text = "$minTemperatures[3]\n$maxTemperatures[3]\n$weatherConditions[3]"
+                "Friday" -> weatherEditView.text = "$minTemperatures[4]\n$maxTemperatures[4]\n$weatherConditions[4]"
+            }
 
 
 
@@ -37,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
             val average = total / maxTemperatures.size
 
-            txtOutput.text = "$result\nTotal: $total\nAverage: $average\nHighest: ${maxTemperatures.max()}"
+            txtOutput.text = "$total\nAverage: $average\nHighest: ${maxTemperatures.max()}"
         }
 
         btnDetailedResults.setOnClickListener {
