@@ -28,6 +28,8 @@ class ResultsScreen : AppCompatActivity() {
             val maxTemperatures = intent.getIntArrayExtra("maxTemperatures")
             val weatherConditions = intent.getStringArrayExtra("weatherConditions")
 
+            txtWeather.text = "$minTemperatures\n$maxTemperatures\n$weatherConditions" 
+
 
     }
 
