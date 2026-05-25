@@ -1,5 +1,6 @@
 package com.example.arrayicetask1
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -22,21 +23,26 @@ class MainActivity : AppCompatActivity() {
 
         btnTemp.setOnClickListener {
 
-            val mintemperatures = arrayOf(12, 15, 10, 18, 16)
-            val maxtemperatures = arrayOf(25, 30, 22, 28, 26)
-            val weatherconditions = arrayOf("Cloudy", "Sunny", "Rainy", "Sunny", "Windy")
+            val minTemperatures = arrayOf(12, 15, 10, 18, 16)
+            val maxTemperatures = arrayOf(25, 30, 22, 28, 26)
+            val weatherConditions = arrayOf("Cloudy", "Sunny", "Rainy", "Sunny", "Windy")
          var result = "25\n 30\n 22\n 28\n 26" 
 
 
 
             var total = 0
-            for (temp in maxtemperatures) {
+            for (temp in maxTemperatures) {
                 total += temp
             }
 
-            val average = total / maxtemperatures.size
+            val average = total / maxTemperatures.size
 
-            txtOutput.text = "$result\nTotal: $total\nAverage: $average\nHighest: ${maxtemperatures.max()}"
+            txtOutput.text = "$result\nTotal: $total\nAverage: $average\nHighest: ${maxTemperatures.max()}"
+        }
+
+        btnDetailedResults.setOnClickListener {
+            val intent = Intent(this, ResultsScreen::class.java)
+            startActivity(intent)
         }
         }
     }
