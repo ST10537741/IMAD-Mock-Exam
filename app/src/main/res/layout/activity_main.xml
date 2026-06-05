@@ -17,11 +17,6 @@
         android:layout_marginLeft="45dp"
         android:layout_marginTop="45dp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/weatherEditView"
-        android:textSize="25dp" />
 
     <Button
         android:id="@+id/btnDetailedResults"
@@ -35,9 +30,32 @@
     <TextView
         android:id="@+id/txtOutput"
         android:layout_marginTop="45dp"
+        android:textSize="18dp"
+        android:hint="results will appear here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:layout_weight="1">
+    <TextView
+        android:id="@+id/weatherTextView"
+        android:layout_marginTop="45dp"
+        android:textSize="25dp"
         android:hint="results will appear here"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    </ScrollView>
+
+
+
+
+
 
 
 
