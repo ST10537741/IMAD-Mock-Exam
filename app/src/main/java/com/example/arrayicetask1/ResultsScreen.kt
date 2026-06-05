@@ -16,23 +16,34 @@ class ResultsScreen : AppCompatActivity() {
         val btnBack = findViewById<Button>(R.id.btnBack)
         val btnWeather = findViewById<Button>(R.id.btnWeather)
         val txtWeather = findViewById<TextView>(R.id.txtWeather)
-        val txtOutput = findViewById<TextView>(R.id.txtOutput)
 
 
-
-
-        btnBack.setOnClickListener {
-            intent = Intent(this, SplashScreen::class.java)
-            startActivity(intent)
-        }
         btnWeather.setOnClickListener {
             val minTemperatures = intent.getIntArrayExtra("minTemperatures")
             val maxTemperatures = intent.getIntArrayExtra("maxTemperatures")
             val weatherConditions = intent.getStringArrayExtra("weatherConditions")
-            val day = intent.getStringExtra("day")
+            val daysOfWeek = intent.getStringArrayExtra("daysOfWeek")
+            val detailedWeather = arrayOf("Cool, cloudy weather in the morning but warms up in the afternoon, low chance of rain.",
+                                          "Warm, sunny day, clear blue skies. Temperatures will remain moderate throughout the day",
+                                          "Cold, rainy day. Rain will begin late morning and persist until the evening.",
+                                          "Warm, sunny day, clear blue skies. Temperatures will remain moderate throughout the day",
+                                          "Warm, moderate temperatures throughout the day, no rain expected but expect strong and persistent gusts of wind.")
+
+            var counter = 0
+            var weatherDisplay = ""
+            while (counter < 5) {
+                weatherDisplay += "Day: ${daysOfWeek?.get(counter)}\n"
+                weatherDisplay += "Min Temperature: ${minTemperatures?.get(counter)}\n"
+                weatherDisplay += "Max Temperature: ${maxTemperatures?.get(counter)}\n"
+                weatherDisplay += "Weather Condition: ${weatherConditions?.get(counter)}\n"
+                weatherDisplay += "Detailed Weather: ${detailedWeather[counter]}\n\n"
+                counter++
+                 txtWeather.text = weatherDisplay
+
+            }
 
 
-            txtWeather.text = "$day\n$minTemperatures\n$maxTemperatures\n$weatherConditions"
+
 
 
         }

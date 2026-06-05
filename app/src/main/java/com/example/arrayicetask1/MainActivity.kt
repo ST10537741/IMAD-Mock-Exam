@@ -42,9 +42,6 @@ class MainActivity : AppCompatActivity() {
 
             }
 
-
-
-
             var total = 0
             for (temp in maxTemperatures) {
                 total += temp
