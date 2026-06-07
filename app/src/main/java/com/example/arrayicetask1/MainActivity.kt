@@ -9,6 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+
+
+
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,13 +25,15 @@ class MainActivity : AppCompatActivity() {
         val btnDetailedResults = findViewById<Button>(R.id.btnDetailedResults)
         val weatherTextView = findViewById<TextView>(R.id.weatherTextView)
 
+        val minTemperatures = arrayOf(12, 15, 10, 18, 16)
+        val maxTemperatures = arrayOf(25, 30, 22, 28, 26)
+        val daysOfWeek = arrayOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+        val weatherConditions = arrayOf("Cloudy", "Sunny", "Rainy", "Sunny", "Windy")
+
 
         btnTemp.setOnClickListener {
 
-            val minTemperatures = arrayOf(12, 15, 10, 18, 16)
-            val maxTemperatures = arrayOf(25, 30, 22, 28, 26)
-            val daysOfWeek = arrayOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
-            val weatherConditions = arrayOf("Cloudy", "Sunny", "Rainy", "Sunny", "Windy")
+
 
             var counter = 0
             var weatherDisplay = ""
@@ -49,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 
             val average = total / maxTemperatures.size
 
-            txtOutput.text = "Total:$total\nAverage: $average\nHighest: ${maxTemperatures.max()}"
+            txtOutput.text = "Average: $average\nHighest: ${maxTemperatures.max()}"
         }
 
         btnDetailedResults.setOnClickListener {

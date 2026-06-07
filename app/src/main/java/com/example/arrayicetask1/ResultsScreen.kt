@@ -17,7 +17,7 @@ class ResultsScreen : AppCompatActivity() {
         val btnWeather = findViewById<Button>(R.id.btnWeather)
         val txtWeather = findViewById<TextView>(R.id.txtWeather)
 
-        val intent  = intent
+
 
 
         btnWeather.setOnClickListener {
@@ -48,6 +48,10 @@ class ResultsScreen : AppCompatActivity() {
 
 
 
+        }
+        btnBack.setOnClickListener {
+            val intent = Intent(this, SplashScreen::class.java)
+            startActivity(intent)
         }
 
 
