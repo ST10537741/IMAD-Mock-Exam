@@ -9,8 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-
-
+val minTemperatures = arrayOf(12, 15, 10, 18, 16)
+val maxTemperatures = arrayOf(25, 30, 22, 28, 26)
+val daysOfWeek = arrayOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+val weatherConditions = arrayOf("Cloudy", "Sunny", "Rainy", "Sunny", "Windy")
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,16 +27,8 @@ class MainActivity : AppCompatActivity() {
         val btnDetailedResults = findViewById<Button>(R.id.btnDetailedResults)
         val weatherTextView = findViewById<TextView>(R.id.weatherTextView)
 
-        val minTemperatures = arrayOf(12, 15, 10, 18, 16)
-        val maxTemperatures = arrayOf(25, 30, 22, 28, 26)
-        val daysOfWeek = arrayOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
-        val weatherConditions = arrayOf("Cloudy", "Sunny", "Rainy", "Sunny", "Windy")
-
 
         btnTemp.setOnClickListener {
-
-
-
             var counter = 0
             var weatherDisplay = ""
             while (counter < 5) {
@@ -46,6 +40,8 @@ class MainActivity : AppCompatActivity() {
 
                 weatherTextView.text = weatherDisplay
 
+
+
             }
 
             var total = 0
@@ -56,11 +52,23 @@ class MainActivity : AppCompatActivity() {
             val average = total / maxTemperatures.size
 
             txtOutput.text = "Average: $average\nHighest: ${maxTemperatures.max()}"
+
         }
+
+
 
         btnDetailedResults.setOnClickListener {
             val intent = Intent(this, ResultsScreen::class.java)
+            intent.putExtra("minTemperatures", minTemperatures)
+            intent.putExtra("maxTemperatures", maxTemperatures)
+            intent.putExtra("weatherConditions", weatherConditions)
+            intent.putExtra("daysOfWeek", daysOfWeek)
             startActivity(intent)
+            finish()
+
+
         }
+
+
         }
     }
