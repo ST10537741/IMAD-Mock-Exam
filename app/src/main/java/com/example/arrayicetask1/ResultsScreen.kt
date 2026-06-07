@@ -17,6 +17,8 @@ class ResultsScreen : AppCompatActivity() {
         val btnWeather = findViewById<Button>(R.id.btnWeather)
         val txtWeather = findViewById<TextView>(R.id.txtWeather)
 
+        val intent  = intent
+
 
         btnWeather.setOnClickListener {
             val minTemperatures = intent.getIntArrayExtra("minTemperatures")
