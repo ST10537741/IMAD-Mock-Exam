@@ -52,7 +52,6 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="45dp"
                 android:layout_marginBottom="45dp"
-                android:backgroundTint="@color/"
                 android:hint="Weather report will appear here"
                 android:textColor="@color/black"
                 android:textSize="20dp" />
