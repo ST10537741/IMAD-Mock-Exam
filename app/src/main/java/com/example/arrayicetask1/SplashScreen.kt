@@ -3,6 +3,7 @@ package com.example.arrayicetask1
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
@@ -13,6 +14,7 @@ class SplashScreen : AppCompatActivity() {
         setContentView(R.layout.splash_screen)
 
         val btnContinue = findViewById<Button>(R.id.btnContinue)
+        val welcomeTextView = findViewById<TextView>(R.id.welcomeTextView)
 
         btnContinue.setOnClickListener {
             intent = Intent(this, MainActivity::class.java)

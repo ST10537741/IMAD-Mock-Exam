@@ -1,63 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/purple_clouds_pixel"
     tools:context=".MainActivity">
 
 
     <Button
         android:id="@+id/btnTemp"
-        android:layout_width="344dp"
-        android:layout_height="wrap_content"
-        android:text="Weather Report"
+        android:layout_width="255dp"
+        android:layout_height="60dp"
         android:layout_marginLeft="45dp"
-        android:layout_marginTop="45dp" />
-
+        android:layout_marginTop="45dp"
+        android:text="Click for Weather Report"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.059" />
 
     <Button
         android:id="@+id/btnDetailedResults"
-        android:layout_width="344dp"
-        android:layout_height="wrap_content"
-        android:text="DetailedResults"
+        android:layout_width="236dp"
+        android:layout_height="70dp"
         android:layout_marginLeft="45dp"
-        android:layout_marginTop="45dp" />
-
+        android:layout_marginTop="45dp"
+        android:text="Go to Detailed Results"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.382"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.915" />
 
     <TextView
         android:id="@+id/txtOutput"
-        android:layout_marginTop="45dp"
-        android:textSize="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
         android:hint="results will appear here"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="50dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.565" />
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:textStyle="bold"
-        android:layout_weight="1">
-    <TextView
-        android:id="@+id/weatherTextView"
-        android:layout_marginTop="45dp"
-        android:textSize="25dp"
-        android:hint="results will appear here"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    </ScrollView>
-
-
-
-
-
-
-
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

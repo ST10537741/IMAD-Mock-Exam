@@ -40,9 +40,10 @@ class ResultsScreen : AppCompatActivity() {
                 weatherDisplay += "Weather Condition: ${weatherConditions?.get(counter)}\n"
                 weatherDisplay += "Detailed Weather: ${detailedWeather[counter]}\n\n"
                 counter++
-                 txtWeather.text = weatherDisplay
+
 
             }
+            txtWeather.text = weatherDisplay
 
 
 
