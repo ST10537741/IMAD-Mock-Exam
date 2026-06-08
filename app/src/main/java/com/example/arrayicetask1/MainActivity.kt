@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
             val average = total / maxTemperatures.size
 
-            txtOutput.text = "Average: $average\nHighest: ${maxTemperatures.max()}"
+            txtOutput.text = "Weather Breakdown for the week\nAverage: $average\nHighest: ${maxTemperatures.max()}"
 
         }
 
