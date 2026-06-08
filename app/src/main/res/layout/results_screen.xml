@@ -38,11 +38,9 @@
             android:textColor="@color/black" />
 
         <ScrollView
-            android:id="@+id/txtWeather"
             android:layout_width="341dp"
             android:layout_height="540dp"
             android:layout_weight="1"
-            android:backgroundTint="#70FFFFFF"
             android:textStyle="bold">
 
             <TextView
@@ -53,8 +51,9 @@
                 android:layout_marginTop="45dp"
                 android:layout_marginBottom="45dp"
                 android:hint="Weather report will appear here"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:textColor="@color/black"/>
+
 
 
         </ScrollView>
