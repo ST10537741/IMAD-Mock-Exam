@@ -15,11 +15,18 @@ class SplashScreen : AppCompatActivity() {
 
         val btnContinue = findViewById<Button>(R.id.btnContinue)
         val welcomeTextView = findViewById<TextView>(R.id.welcomeTextView)
+        val btnExit = findViewById<Button>(R.id.btnExit)
+
+        welcomeTextView.text = "Weather"
 
         btnContinue.setOnClickListener {
             intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+        btnExit.setOnClickListener {
+            finish()
+        }
+
     }
 
 
