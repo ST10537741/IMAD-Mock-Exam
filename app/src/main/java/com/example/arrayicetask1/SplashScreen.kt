@@ -19,10 +19,13 @@ class SplashScreen : AppCompatActivity() {
 
         welcomeTextView.text = "Weather"
 
+        // use intent to send user to the main activity upon button click
         btnContinue.setOnClickListener {
             intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+
+        // exit the app upon button click
         btnExit.setOnClickListener {
             finish()
         }
